@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavin M | AI & MLOps Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script>
+    function toggleThemeIcon() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      html.classList.toggle('dark');
+      icon.setAttribute('data-lucide', html.classList.contains('dark') ? 'sun' : 'moon');
+      lucide.createIcons();
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&dispklay=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+  <header class="relative text-center py-10 bg-white dark:bg-gray-800 shadow">
+    <div class="absolute top-6 right-6">
+      <button onclick="toggleThemeIcon()" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">
+        <i id="theme-icon" data-lucide="moon" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <h1 class="text-4xl font-extrabold">Kavin</h1>
+    <p class="text-lg mt-2">AI & MLOps Engineer | Cloud Practitioner | Data Enthusiast</p>
+    <nav class="mt-4 space-x-4">
+      <a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">About</a>
+      <a href="#education" class="text-blue-600 dark:text-blue-400 hover:underline">Education</a>
+      <a href="#skills" class="text-blue-600 dark:text-blue-400 hover:underline">Skills</a>
+      <a href="#projects" class="text-blue-600 dark:text-blue-400 hover:underline">Projects</a>
+      <a href="#experience" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
+      <a href="#certifications" class="text-blue-600 dark:text-blue-400 hover:underline">Certifications</a>
+      <a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+    <section id="about">
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p>I am a passionate AI & MLOps Engineer currently pursuing M.Tech in Cloud Computing. I have a strong foundation in machine learning, data engineering, and cloud-native solutions with hands-on experience in deploying secure, scalable, and automated workflows using AWS and Terraform. My interests include deep learning, cloud automation, and real-time analytics.</p>
+    </section>
+
+    <section id="education">
+      <h2 class="text-2xl font-semibold mb-4">Education</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>SRM Institute of Science and Technology - M.Tech Cloud Computing</strong> – 81%<br><span class="text-sm">June 2024 - May 2026</span></li>
+        <li><strong>B.S Abdur Rahman Crescent Institute of Science and Technology - Artificial Intelligence and Data Science</strong> – 80%<br><span class="text-sm">September 2020 - May 2024</span></li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Languages:</strong> Python, SQL</li>
+        <li><strong>Cloud Platforms:</strong> AWS, Google Cloud</li>
+        <li><strong>Tools:</strong> Databricks, Linux, Power BI, Terraform, GitHub</li>
+        <li><strong>Domains:</strong> MLOps, Data Engineering</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <div class="space-y-6">
+        <article>
+          <h3 class="text-xl font-bold">GAN-Based Denoising for Low-Dose CT Images</h3>
+          <p>Developed a GAN model (U-Net + PatchGAN) using PyTorch to enhance low-dose chest CT images. Evaluated using PSNR. <a href="https://github.com/Kavin-M-2002/GAN-Based-Denoising-for-Low-Dose-Chest-CT-Images" class="text-blue-500 underline">GitHub</a></p>
+        </article>
+        <article>
+          <h3 class="text-xl font-bold">Zero Trust Network Implementation on Data Centers</h3>
+          <p>Built Zero Trust architecture using AWS & Terraform for secure data center access. <a href="https://github.com/Kavin-M-2002/zero-trust-network-implementation" class="text-blue-500 underline">GitHub</a></p>
+        </article>
+        <article>
+          <h3 class="text-xl font-bold">Transport Fleet Optimization and Analytics</h3>
+          <p>Designed real-time AWS data pipeline for transport KPIs, alerts, and dashboards. <a href="https://github.com/Kavin-M-2002/transport-fleet-analytics-aws" class="text-blue-500 underline">GitHub</a></p>
+        </article>
+        <article>
+          <h3 class="text-xl font-bold">Airbnb Data Analysis</h3>
+          <p>Used Apache Spark to analyze Airbnb listings in London, focusing on pricing and availability trends. <a href="https://github.com/Kavin-M-2002/Airbnb-Data-Analysis" class="text-blue-500 underline">GitHub</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+      <div class="space-y-4">
+        <div>
+          <p><strong>Research Intern – IIT Roorkee (Jun 2025 – Present)</strong></p>
+          <p>Developing deep learning models and contributing to research publication in the field of medical image processing.</p>
+        </div>
+        <div>
+          <p><strong>Data Analyst Intern – AtliQ Technologies (Jun–Jul 2024)</strong></p>
+          <p>Performed data storytelling and dashboarding with Power BI, SQL, and Python. Gained exposure to business decision-making and analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2 class="text-2xl font-semibold mb-4">Certifications</h2>
+      <ul class="list-disc list-inside space-y-2 text-black dark:text-white">
+        <li><a href="https://www.credly.com/badges/044e59f6-ef66-4436-8f17-f69317d7324d/public_url" target="_blank" class="hover:underline">Google Cloud Data Analytics</a></li>
+        <li><a href="https://www.credly.com/badges/9657d07f-0ab3-4085-a686-32e9a6c48427/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Operations</a></li>
+        <li><a href="https://www.credly.com/badges/19c98ed8-0c7a-4f80-b65a-0c672099abf0/linked_in_profile" target="_blank" class="hover:underline">AWS Data Engineering</a></li>
+        <li><a href="https://www.credly.com/badges/42b710b2-c1ff-4ea4-b801-d3952c8bde1c/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Architecting</a></li>
+        <li><a href="https://codebasics.io/certificate/CB-69-67243" target="_blank" class="hover:underline">Machine Learning for Data Science – Codebasics</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <div class="flex space-x-6 text-2xl">
+        <a href="mailto:km3493@srmist.edu.in" target="_blank" class="hover:text-blue-500"><i data-lucide="mail"></i></a>
+        <a href="https://www.linkedin.com/in/kavin-2002m19/" target="_blank" class="hover:text-blue-500"><i data-lucide="linkedin"></i></a>
+        <a href="https://github.com/Kavin-M-2002" target="_blank" class="hover:text-blue-500"><i data-lucide="github"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
