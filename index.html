@@ -4,162 +4,214 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kavin's Portfolio</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       darkMode: 'class',
     }
   </script>
-  <script>
-    function toggleThemeIcon() {
-      const html = document.documentElement;
-      const icon = document.getElementById('theme-icon');
-      html.classList.toggle('dark');
-      icon.setAttribute('data-lucide', html.classList.contains('dark') ? 'sun' : 'moon');
-      lucide.createIcons();
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&dispklay=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
+    html {
+      scroll-padding-top: 80px;
+    }
   </style>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+  <!-- HEADER -->
   <header class="relative text-center py-10 bg-white dark:bg-gray-800 shadow">
     <div class="absolute top-6 right-6">
-      <button onclick="toggleThemeIcon()" class="text-gray-800 dark:text-gray-200 hover:text-blue-600">
+      <button onclick="toggleTheme()" class="hover:text-blue-600">
         <i id="theme-icon" data-lucide="moon" class="w-6 h-6"></i>
       </button>
     </div>
+
     <h1 class="text-4xl font-extrabold">Kavin M</h1>
-    </p>
-    <a href="Kavin Resume.pdf" download class="inline-block mt-4 px-4 py-2 border border-blue-600 text-blue-600 dark:text-blue-400 rounded transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-800">
+
+    <a href="Kavin Resume.pdf" download
+      class="inline-block mt-4 px-4 py-2 border border-blue-600 text-blue-600 dark:text-blue-400 rounded transition transform hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-800">
       Download Resume
     </a>
+
     <nav class="mt-4 space-x-4">
-      <a href="#about" class="text-blue-600 dark:text-blue-400 rounded transition-all duration-300 ease-in-out transform hover:scale-105hover:underline">About</a>
-      <a href="#education" class="text-blue-600 dark:text-blue-400 hover:underline">Education</a>
-      <a href="#skills" class="text-blue-600 dark:text-blue-400 hover:underline">Skills</a>
-      <a href="#projects" class="text-blue-600 dark:text-blue-400 hover:underline">Projects</a>
-      <a href="#experience" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
-      <a href="#certifications" class="text-blue-600 dark:text-blue-400 hover:underline">Certifications</a>
-      <a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
+      <a href="#about" class="text-blue-600 hover:underline hover:scale-105">About</a>
+      <a href="#education" class="text-blue-600 hover:underline">Education</a>
+      <a href="#skills" class="text-blue-600 hover:underline">Skills</a>
+      <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
+      <a href="#experience" class="text-blue-600 hover:underline">Experience</a>
+      <a href="#certifications" class="text-blue-600 hover:underline">Certifications</a>
+      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+
+    <!-- ABOUT -->
     <section id="about">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">About Me</h2>
-      <p>I am a passionate AI & MLOps Engineer currently pursuing M.Tech in Cloud Computing. I have a strong foundation in machine learning, data engineering, and cloud-native solutions with hands-on experience in deploying secure, scalable, and automated workflows using AWS and Terraform. My interests include deep learning, cloud automation, and real-time analytics.</p>
+      <h2 class="text-2xl font-semibold mb-4 hover:scale-105 transition">About Me</h2>
+      <p>
+        I am a passionate AI & MLOps Engineer currently pursuing M.Tech in Cloud Computing.
+        I have strong experience in machine learning, cloud, and real-time systems.
+      </p>
     </section>
 
+    <!-- EDUCATION -->
     <section id="education">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Education</h2>
+      <h2 class="text-2xl font-semibold mb-4 hover:scale-105 transition">Education</h2>
       <ul class="list-disc list-inside space-y-2">
-        <li><strong>SRM Institute of Science and Technology - M.Tech Cloud Computing</strong> – 85%<br><span class="text-sm">June 2024 - May 2026</span></li>
-        <li><strong>B.S Abdur Rahman Crescent Institute of Science and Technology - Artificial Intelligence and Data Science</strong> – 80%<br><span class="text-sm">September 2020 - May 2024</span></li>
+        <li><strong>SRM IST - M.Tech Cloud Computing</strong> – 85%</li>
+        <li><strong>Crescent Institute - AI & DS</strong> – 80%</li>
       </ul>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Skills</h2>
+      <h2 class="text-2xl font-semibold mb-4 hover:scale-105 transition">Skills</h2>
       <ul class="list-disc list-inside space-y-2">
-        <li><strong>Languages:</strong> Python, SQL</li>
-        <li><strong>Cloud Platforms:</strong> AWS, Google Cloud</li>
-        <li><strong>Tools:</strong> Databricks, Linux, Power BI, Terraform, GitHub</li>
-        <li><strong>Domains:</strong> MLOps, Data Engineering</li>
+        <b>Programming Languages:</b> <li>Python, SQL, Java</li>
+        <b>Cloud Platforms:</b> <li>Amazon Web Services (AWS), Docker</li>
+        <b>Tools:</b> <li>Terraform, Databricks, Linux</li>
+        <b>Domains:</b> <li>MLOps, Data Engineering</li>
       </ul>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Projects</h2>
-      <div class="space-y-6">
-        <article>
-          <h3 class="text-xl font-bold">Real Time Speech based Emotion Recognition</h3>
-          <p>Developed a cloud-native deep learning framework that can recognize emotions in speech in real time. <a href="https://github.com/Kavin-M-2002/emotion-recognition" class="text-blue-500 underline">GitHub</a></p>
-        </article>
-        <article>
-          <h3 class="text-xl font-bold">GAN-Based Denoising for Low-Dose CT Images</h3>
-          <p>Developed a GAN model (U-Net + PatchGAN) using PyTorch to enhance low-dose chest CT images. Evaluated using PSNR. <a href="https://github.com/Kavin-M-2002/GAN-Based-Denoising-for-Low-Dose-Chest-CT-Images" class="text-blue-500 underline">GitHub</a></p>
-        </article>
-        <article>
-          <h3 class="text-xl font-bold">Zero Trust Network Implementation on Data Centers</h3>
-          <p>Built Zero Trust architecture using AWS & Terraform for secure data center access. <a href="https://github.com/Kavin-M-2002/zero-trust-network-implementation" class="text-blue-500 underline">GitHub</a></p>
-        </article>
-        <article>
-          <h3 class="text-xl font-bold">Transport Fleet Optimization and Analytics</h3>
-          <p>Designed real-time AWS data pipeline for transport KPIs, alerts, and dashboards. <a href="https://github.com/Kavin-M-2002/transport-fleet-analytics-aws" class="text-blue-500 underline">GitHub</a></p>
-        </article>
+      <h2 class="text-2xl font-semibold mb-4 hover:scale-105 transition">Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="p-4 border rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold">AI Based Cloud Resource Optimization System<h3>
+          <p>An end-to-end ML-powered cloud optimization pipeline that forecasts CPU workloads and automatically scales cloud resources using AWS services and predictive analytics.</p>
+          <a href="https://github.com/Kavin-M-2002/AI-Driven-Cloud-Resource-Optimization-System" class="text-blue-500 underline">GitHub</a>
+        </div>
+
+        <div class="p-4 border rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold">Real Time Speech based Emotion Recognition</h3>
+          <p>Developed a cloud-native deep learning framework that can recognize emotions in speech in real time.</p>
+          <a href="https://github.com/Kavin-M-2002/emotion-recognition" class="text-blue-500 underline">GitHub</a>
+        </div>
+
+        <div class="p-4 border rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold">GAN-Based Denoising for Low-Dose CT Images</h3>
+          <p>Developed a GAN model (U-Net + PatchGAN) using PyTorch to enhance low-dose chest CT images. Evaluated using PSNR. </p>
+           <a href="https://github.com/Kavin-M-2002/GAN-Based-Denoising-for-Low-Dose-Chest-CT-Images" class="text-blue-500 underline">GitHub</a>
+        </div>
+
+        <div class="p-4 border rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold">Zero Trust Network Implementation on Data Centers</h3>
+          <p>Built Zero Trust architecture using AWS & Terraform for secure data center access.</p>
+          <a href="https://github.com/Kavin-M-2002/zero-trust-network-implementation" class="text-blue-500 underline">GitHub</a>
+        </div>
+
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Experience</h2>
-      <div class="space-y-4">
-        <div>
-          <p><strong>Technology Intern – Virtusa (August 2025 – November 2025)</strong></p>
-          <p>Worked on real time innovative projects involving Cloud and AI. Engaged in internal training programs, initiatives and completed global level certifications.</p>
-        </div>
-        <div>
-          <p><strong>Research Intern – Anusandhan National Research Foundation (June 2025 – July 2025)</strong></p>
-          <p>Developing deep learning models and contributing to research publication in the field of medical image processing.</p>
-        </div>
-      </div>
-    </section>
+  <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Experience</h2>
+  <div class="space-y-4">
+    <div>
+      <p><strong>Technology Intern – Virtusa (August 2025 – November 2025)</strong></p>
+      <p>Worked on real time innovative projects involving Cloud and AI. Engaged in internal training programs, initiatives and completed global level certifications.</p>
+    </div>
+    <div>
+      <p><strong>Research Intern – Anusandhan National Research Foundation (June 2025 – July 2025)</strong></p>
+      <p>Developing deep learning models and contributing to research publication in the field of medical image processing.</p>
+    </div>
+  </div>
+</section>
 
+    <!-- CERTIFICATIONS -->
     <section id="certifications">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Certifications</h2>
-      <ul class="list-disc list-inside space-y-2 text-black dark:text-white">
-        <li><a href="https://www.credly.com/badges/044e59f6-ef66-4436-8f17-f69317d7324d/public_url" target="_blank" class="hover:underline">Google Cloud Data Analytics</a></li>
-        <li><a href="https://www.credly.com/badges/9657d07f-0ab3-4085-a686-32e9a6c48427/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Operations</a></li>
-        <li><a href="https://www.credly.com/badges/19c98ed8-0c7a-4f80-b65a-0c672099abf0/linked_in_profile" target="_blank" class="hover:underline">AWS Data Engineering</a></li>
-        <li><a href="https://www.credly.com/badges/42b710b2-c1ff-4ea4-b801-d3952c8bde1c/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Architecting</a></li>
-        <li><a href="https://codebasics.io/certificate/CB-69-67243" target="_blank" class="hover:underline">Machine Learning for Data Science – Codebasics</a></li>
-        <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=87913964FA157C569B826BED955D94A9D38A53DA2B8DFB76E4BD4BF92E29D76D" target="_blank" class="hover:underline">Oracle AI Foundations Associate</a></li>
-      </ul>
-    </section>
+  <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Certifications</h2>
+  <ul class="list-disc list-inside space-y-2 text-black dark:text-white">
+    <li><a href="https://www.credly.com/badges/044e59f6-ef66-4436-8f17-f69317d7324d/public_url" target="_blank" class="hover:underline">Google Cloud Data Analytics</a></li>
+    <li><a href="https://www.credly.com/badges/9657d07f-0ab3-4085-a686-32e9a6c48427/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Operations</a></li>
+    <li><a href="https://www.credly.com/badges/19c98ed8-0c7a-4f80-b65a-0c672099abf0/linked_in_profile" target="_blank" class="hover:underline">AWS Data Engineering</a></li>
+    <li><a href="https://www.credly.com/badges/42b710b2-c1ff-4ea4-b801-d3952c8bde1c/linked_in_profile" target="_blank" class="hover:underline">AWS Cloud Architecting</a></li>
+    <li><a href="https://codebasics.io/certificate/CB-69-67243" target="_blank" class="hover:underline">Machine Learning for Data Science – Codebasics</a></li>
+    <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=87913964FA157C569B826BED955D94A9D38A53DA2B8DFB76E4BD4BF92E29D76D" target="_blank" class="hover:underline">Oracle AI Foundations Associate</a></li>
+  </ul>
+</section>
 
+    <!-- CONTACT -->
     <section id="contact">
-      <h2 class="text-2xl font-semibold mb-4 transition-all duration-300 ease-in-out transform hover:scale-105">Contact</h2>
-      <div class="flex space-x-6 text-2xl">
-        <a href="mailto:kavinm200218@gmail.com" target="_blank" class="hover:text-blue-500"><i data-lucide="mail"></i></a>
-        <a href="https://www.linkedin.com/in/kavin-2002m19/" target="_blank" class="hover:text-blue-500"><i data-lucide="linkedin"></i></a>
-        <a href="https://github.com/Kavin-M-2002" target="_blank" class="hover:text-blue-500"><i data-lucide="github"></i></a>
+      <h2 class="text-2xl font-semibold mb-4 hover:scale-105 transition">Contact</h2>
+
+      <div class="flex space-x-6">
+        <a href="mailto:kavinm200218@gmail.com" class="hover:text-blue-500 transform hover:scale-110 transition">
+          <i data-lucide="mail" class="w-6 h-6"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kavin-2002m19/" target="_blank"
+          class="hover:text-blue-500 transform hover:scale-110 transition">
+          <i data-lucide="linkedin" class="w-6 h-6"></i>
+        </a>
+        <a href="https://github.com/Kavin-M-2002" target="_blank"
+          class="hover:text-blue-500 transform hover:scale-110 transition">
+          <i data-lucide="github" class="w-6 h-6"></i>
+        </a>
       </div>
     </section>
+
   </main>
 
-  <script>
-    lucide.createIcons();
-  </script>
-  <button id="backToTop" class="hidden fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700 z-50 opacity-0 translate-y-4">
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-gray-500">
+    © 2026 Kavin M | Built with Tailwind CSS
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button onclick="scrollToTop()" id="backToTop"
+    class="hidden fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">
     <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>
 
+  <!-- SCRIPTS -->
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.classList.remove('hidden', 'opacity-0', 'translate-y-4');
-    backToTopButton.classList.add('opacity-100', 'translate-y-0');
-  } else {
-    backToTopButton.classList.remove('opacity-100', 'translate-y-0');
-    backToTopButton.classList.add('opacity-0', 'translate-y-4');
-    setTimeout(() => backToTopButton.classList.add('hidden'), 300);
-  }
-});
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      document.getElementById('theme-icon')
+        .setAttribute('data-lucide', html.classList.contains('dark') ? 'sun' : 'moon');
+      lucide.createIcons();
+    }
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    const btn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btn.classList.remove("hidden");
+      } else {
+        btn.classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
   </script>
 
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>
